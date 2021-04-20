@@ -1,0 +1,34 @@
+{
+  "name": "tstest",
+  "version": "1.0.0",
+  "description": "ts demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "npm run eslint && npm run prettier && rm -rf lib && tsc --build",
+    "eslint": "eslint --fix src --ext .ts --max-warnings=0",
+    "prettier": "prettier --write \"src/**/*.ts\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xlintime/tsTest.git"
+  },
+  "keywords": [
+    "ts",
+    "cli"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xlintime/tsTest/issues"
+  },
+  "homepage": "https://github.com/xlintime/tsTest#readme",
+  "devDependencies": {
+    "@types/node": "^14.14.41",
+    "eslint": "^7.24.0",
+    "prettier": "^2.2.1",
+    "ts-node-dev": "^1.1.6",
+    "typescript": "^4.2.4"
+  }
+}
